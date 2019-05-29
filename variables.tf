@@ -1,4 +1,4 @@
-quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.24.1
+#quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.24.1
 
 variable "image" {
   description = "Docker image for the nginx-ingress-controller"
