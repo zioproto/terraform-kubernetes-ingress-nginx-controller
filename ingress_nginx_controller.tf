@@ -50,7 +50,7 @@ resource "kubernetes_deployment" "nginx_ingress_controller" {
         }
 
         annotations {
-          "prometheus.io/port"   = "${local.prove_port}"
+          "prometheus.io/port"   = "${local.probe_port}"
           "prometheus.io/scrape" = "true"
         }
       }
@@ -102,7 +102,7 @@ resource "kubernetes_deployment" "nginx_ingress_controller" {
           liveness_probe {
             http_get {
               path   = "/healthz"
-              port   = "${local.prove_port}"
+              port   = "${local.probe_port}"
               scheme = "HTTP"
             }
 
@@ -116,7 +116,7 @@ resource "kubernetes_deployment" "nginx_ingress_controller" {
           readiness_probe {
             http_get {
               path   = "/healthz"
-              port   = "${local.prove_port}"
+              port   = "${local.probe_port}"
               scheme = "HTTP"
             }
 

@@ -1,4 +1,4 @@
 locals {
   name = "ingress-nginx"
-  prove_port = "10254"
+  probe_port = "10254"
 }
