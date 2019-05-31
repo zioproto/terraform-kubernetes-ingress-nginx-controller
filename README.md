@@ -7,7 +7,7 @@ This module will deploy what you usually deploy doing:
 # Example Usage
 ```
 module "nginx-ingress-controller" {
-  source = "./terraform-kubernetes-nginx-ingress-controller"
+  source = "./terraform-kubernetes-ingress-nginx-controller"
 }
 ```
 
